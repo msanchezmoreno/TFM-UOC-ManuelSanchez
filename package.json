@@ -1,0 +1,35 @@
+{
+  "name": "Capybara Studio",
+  "version": "1.0.0",
+  "description": "Trabajo final de Master. Sitio web de Capybara Studio.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msanchezmoreno/TFM-UOC-ManuelSanchez.git"
+  },
+  "keywords": [
+    "web",
+    "design",
+    "graphic",
+    "design",
+    "ux",
+    "ui",
+    "accesibility",
+    "page",
+    "speed",
+    "sass"
+  ],
+  "author": "Manuel Sánchez Moreno",
+  "license": "GNU GENERAL PUBLIC LICENSE",
+  "bugs": {
+    "url": "https://github.com/msanchezmoreno/TFM-UOC-ManuelSanchez/issues"
+  },
+  "homepage": "https://github.com/msanchezmoreno/TFM-UOC-ManuelSanchez#readme",
+  "devDependencies": {
+    "gulp": "^4.0.1",
+    "gulp-sass": "^4.0.2"
+  }
+}

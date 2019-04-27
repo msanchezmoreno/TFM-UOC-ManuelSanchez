@@ -1,0 +1,38 @@
+@import 'componentes/mixin';
+
+.cols-1{
+    @include grid(1);
+}
+.cols-2 {
+    @include grid(2);
+}
+.cols-3 {
+    @include grid(3);
+}
+.cols-4 {
+    @include grid(4);
+}
+.cols-5 {
+    @include grid(5);
+}
+.cols-6 {
+    @include grid(6);
+}
+.cols-7 {
+    @include grid(7);
+}
+.cols-8 {
+    @include grid(8);
+}
+.cols-9 {
+    @include grid(9);
+}
+.cols-10 {
+    @include grid(10);
+}
+.cols-11 {
+    @include grid(11);
+}
+.cols-12 {
+    @include grid(12);
+}
