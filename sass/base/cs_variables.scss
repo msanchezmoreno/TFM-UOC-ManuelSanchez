@@ -1,0 +1,70 @@
+// VARIABLES
+// Google fonts*
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:400,700');
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
+
+// Paleta de colores*
+    // Genéricos 
+    $CS-text:#333;
+    $CS-grey:#aaa;
+    $CS-lightgrey:#EDE8E8;
+    $CS-blanco:#fff;
+
+    // Backgrounds
+    $c-fondo:#fafafa;
+
+    // Secciones 
+    $CS-corporativo:#0EA7B3;
+    $CS-about:#FC960B;
+    $CS-portfolio:#E965C6;
+    $CS-contact:#7AEB58;
+    $CS-blog:#85FFD5;
+
+    // Tipografía 
+    $CS-font-primary:'Comfortaa', sans-serif, cursive;
+    $CS-font-second:'Gloria Hallelujah', sans-serif, cursive;
+    $CS-fsize: 14px;
+    $CS-strong: bolder;
+
+    // Tamaños 
+    $CS-100: 100%;
+    $CS-90: 90%;
+    $CS-80: 80%;
+    $CS-70: 70%;
+    $CS-60: 60%;
+    $CS-50: 50%;
+    $CS-40: 40%;
+    $CS-30: 30%;
+    $CS-20: 20%;
+    $CS-10: 10%;
+    $CS-0: 0%;
+
+//Posiciones
+  $CS-left:left;
+  $CS-center:center;
+  $CS-right:right;
+
+// Clases colores fondo
+.c-lightgrey {background-color: $c-fondo;}
+.c-corporativo {background-color: $CS-corporativo}
+.c-about {background-color: $CS-about}
+.c-portfolio {background-color: $CS-portfolio}
+.c-contact {background-color: $CS-contact}
+.c-blog {background-color: $CS-blog}
+
+//Colores texto
+.c-t-blanco {color:$CS-blanco};
+.c-t-darkgrey {color:$CS-text};
+.c-t-grey {color:$CS-grey};
+.c-t-lightgrey {color:$CS-lightgrey};
+.c-t-corporativo {color:$c-fondo;};
+.c-t-about {color: $CS-about}
+.c-t-portfolio {color: $CS-portfolio}
+.c-t-contact {color: $CS-contact}
+.c-t-blog {color: $CS-blog}
+
+// Clases posiciones
+.c-space-around {
+    display: flex;
+    justify-content: space-around;
+}

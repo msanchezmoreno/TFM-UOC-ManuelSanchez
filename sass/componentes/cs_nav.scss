@@ -1,0 +1,135 @@
+//Variables
+
+    $CS-back-mobile:$CS-blanco;
+    $CS-button-color:$CS-corporativo;
+
+    $CS-full:$CS-100;
+    $CS-half:$CS-50;
+
+    $CS-l:$CS-left;
+    $CS-c:$CS-center;
+    $CS-r:$CS-right;
+
+    //Variables de dimensiones viewport
+    $min_width: 320;
+    $max_width: 1024;
+    
+
+// MENÚ ESCRITORIO
+.navbar_desktop {
+  -webkit-box-shadow: 0px 3px 6px -1px rgba(51,51,51,0.1);
+  -moz-box-shadow: 0px 3px 6px -1px rgba(51,51,51,0.1);
+   box-shadow: 0px 3px 6px -1px rgba(51,51,51,0.1);
+}
+
+// MENÚ MÓVIL
+    //Nav
+    $min_a-mobile_font: 20;
+    $max_a-mobile_font: 26; 
+
+.navbar_mobile  {
+  width: $CS-full;
+  height: $CS-full;
+  display: flex;
+  text-align: $CS-c;
+  flex-direction: column;
+  justify-content: $CS-c;
+  align-items: $CS-c;
+  opacity: 0.95;
+  visibility: hidden;
+  transition: all .5s ease;
+  z-index: 2;
+}
+.navbar_mobile__ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  max-height: 80vh;
+  width: $CS-full;
+}
+.navbar_mobile__li {
+  align-items: $CS-c;
+  line-height: 12vh;
+}
+.navbar_mobile__li-a {
+    font-size: #{$min_a-mobile_font}px;
+    transition: all 0.5s ease;
+}
+    @media (min-width: #{$min_width}px) and (max-width: #{$max_width}px){
+      .navbar_mobile__li-a { 
+        font-size: calc( #{$min_a-mobile_font}px + (#{$max_a-mobile_font} - #{$min_a-mobile_font}) * ( (100vw - #{$min_width}px) / ( #{$max_width} - #{$min_width}) ));
+      }
+    }
+    @media (min-width: #{$max_width}px){
+      .navbar_mobile__li-a  { 
+        font-size: #{$max_a-mobile_font}px;
+        line-height: calc( #{$max_a-mobile_font}px * 2);
+      }
+    }
+
+.navbar_mobile--open {
+  visibility: visible;
+}
+
+// Botón menú móvil
+.button_toggle {
+  background: $CS-button-color;
+  border-radius: $CS-half;
+  border:none;
+  position: fixed;
+  left: 25px;
+  bottom: 25px;
+  z-index: 400;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  transition: all .5s ease;
+  -webkit-box-shadow: 3px 4px 15px -3px rgba(51,51,51,0.4);
+  -moz-box-shadow: 3px 4px 15px -3px rgba(51,51,51,0.4);
+    box-shadow: 3px 4px 15px -3px rgba(51,51,51,0.4);
+}
+.button_toggle:hover {
+  background: darken($CS-button-color, 10%);
+}
+.toggle-overlay span:before, .toggle-overlay span:after {
+  border-radius: 3px;
+  height: 4px;
+  width: 25px;
+  background: #fff;
+  position: absolute;
+  display: block;
+  content: '';
+}
+.toggle-overlay span:before {
+  position: relative;
+    top: 2px;
+    left: 4px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+.toggle-overlay span:after {
+     position: relative;
+    top: -1px;
+    left: 4px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+// Animación botón menú móvil
+.button_toggle--rotate {
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+}
+.button_toggle--rotate span:after, .button_toggle--rotate span::before {
+  position: relative;
+}
+.button_toggle--rotate span:after {
+  top: -1px;
+  left: 5px;
+}
+.button_toggle--rotate span::before {
+  top: 3px;
+  left: 5px;
+}

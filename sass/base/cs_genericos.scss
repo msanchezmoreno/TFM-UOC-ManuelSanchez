@@ -1,0 +1,175 @@
+// ESTILOS GENÉRICOS
+
+html {
+ scroll-behavior: smooth;
+}
+    //Variables de dimensiones viewport
+    $min_width: 320;
+    $max_width: 1024;
+
+    //Variables generales de color y tamaño
+    $CS-background:$CS-blanco;
+
+    $CS-comforta:$CS-font-primary;
+    $CS-Hallelujah:$CS-font-second;
+    $CS-font-color:$CS-text;
+    $CS-general-font-size:$CS-fsize;
+    
+    $CS-font-color:$CS-text;
+    $CS-weight-title:$CS-strong;
+
+html, body {
+  font-size: $CS-general-font-size;
+  font-family: $CS-comforta;
+  color:$CS-font-color;
+  background-color: $CS-blanco;
+}
+
+// FUENTES GENERALES
+
+    //h1
+
+    $min_h1_font: 42;
+    $max_h1_font: 50; 
+
+    h1  {
+        font-size: #{$min_h1_font}px;
+        line-height: calc( #{$min_h1_font}px * 2);
+        font-weight: $CS-weight-title;
+    }
+    @media (min-width: #{$min_width}px) and (max-width: #{$max_width}px){
+      h1 { 
+        font-size: calc( #{$min_h1_font}px + (#{$max_h1_font} - #{$min_h1_font}) * ( (100vw - #{$min_width}px) / ( #{$max_width} - #{$min_width}) ));
+        line-height: calc(( #{$min_h1_font}px + (#{$max_h1_font} - #{$min_h1_font}) * ( (100vw - #{$min_width}px) / ( #{$max_width} - #{$min_width}) )) * 2);
+      }
+    }
+    @media (min-width: #{$max_width}px){
+      h1  { 
+        font-size: #{$max_h1_font}px;
+        line-height: calc( #{$max_h1_font}px * 2);
+      }
+    }
+
+    //h2
+
+    $min_h2_font: 36;
+    $max_h2_font: 42; 
+
+    h2  {
+        font-size: #{$min_h2_font}px;
+        line-height: calc( #{$min_h2_font}px * 2);
+    }
+    @media (min-width: #{$min_width}px) and (max-width: #{$max_width}px){
+      h2 { 
+        font-size: calc( #{$min_h2_font}px + (#{$max_h2_font} - #{$min_h2_font}) * ( (100vw - #{$min_width}px) / ( #{$max_width} - #{$min_width}) ));
+        line-height: calc(( #{$min_h2_font}px + (#{$max_h2_font} - #{$min_h2_font}) * ( (100vw - #{$min_width}px) / ( #{$max_width} - #{$min_width}) )) * 2);
+      }
+    }
+    @media (min-width: #{$max_width}px){
+      h2  { 
+        font-size: #{$max_h2_font}px;
+        line-height: calc( #{$max_h2_font}px * 2);
+      }
+    }
+
+    //h3
+
+    $min_h3_font: 30;
+    $max_h3_font: 36; 
+
+    h3  {
+        font-size: #{$min_h3_font}px;
+        line-height: calc( #{$min_h3_font}px * 2);
+    }
+    @media (min-width: #{$min_width}px) and (max-width: #{$max_width}px){
+      h3 { 
+        font-size: calc( #{$min_h3_font}px + (#{$max_h3_font} - #{$min_h3_font}) * ( (100vw - #{$min_width}px) / ( #{$max_width} - #{$min_width}) ));
+        line-height: calc(( #{$min_h3_font}px + (#{$max_h3_font} - #{$min_h3_font}) * ( (100vw - #{$min_width}px) / ( #{$max_width} - #{$min_width}) )) * 2);
+      }
+    }
+    @media (min-width: #{$max_width}px){
+      h3  { 
+        font-size: #{$max_h3_font}px;
+        line-height: calc( #{$max_h3_font}px * 2);
+      }
+    }
+    
+    //h4
+
+    $min_h4_font: 20;
+    $max_h4_font: 24; 
+
+    h4  {
+        font-size: #{$min_h4_font}px;
+        line-height: calc( #{$min_h4_font}px * 2);
+    }
+    @media (min-width: #{$min_width}px) and (max-width: #{$max_width}px){
+      h4 { 
+        font-size: calc( #{$min_h4_font}px + (#{$max_h4_font} - #{$min_h4_font}) * ( (100vw - #{$min_width}px) / ( #{$max_width} - #{$min_width}) ));
+        line-height: calc(( #{$min_h4_font}px + (#{$max_h4_font} - #{$min_h4_font}) * ( (100vw - #{$min_width}px) / ( #{$max_width} - #{$min_width}) )) * 2);
+      }
+    }
+    @media (min-width: #{$max_width}px){
+      h4  { 
+        font-size: #{$max_h4_font}px;
+        line-height: calc( #{$max_h4_font}px * 2);
+      }
+    }
+    
+    //h5
+
+    $min_h5_font: 18;
+    $max_h5_font: 22; 
+
+    h5  {
+        font-size: #{$min_h4_font}px;
+        line-height: calc( #{$min_h5_font}px * 2);
+    }
+    @media (min-width: #{$min_width}px) and (max-width: #{$max_width}px){
+      h5 { 
+        font-size: calc( #{$min_h5_font}px + (#{$max_h5_font} - #{$min_h5_font}) * ( (100vw - #{$min_width}px) / ( #{$max_width} - #{$min_width}) ));
+        line-height: calc(( #{$min_h5_font}px + (#{$max_h5_font} - #{$min_h5_font}) * ( (100vw - #{$min_width}px) / ( #{$max_width} - #{$min_width}) )) * 2);
+      }
+    }
+    @media (min-width: #{$max_width}px){
+      h5  { 
+        font-size: #{$max_h5_font}px;
+        line-height: calc( #{$max_h5_font}px * 2);
+      }
+    }
+
+    //h6
+
+    $min_h6_font: 16;
+    $max_h6_font: 18; 
+
+    h6  {
+        font-size: #{$min_h4_font}px;
+        line-height: calc( #{$min_h6_font}px * 2);
+        font-weight: $CS-weight-title;
+    }
+    @media (min-width: #{$min_width}px) and (max-width: #{$max_width}px){
+      h6 { 
+        font-size: calc( #{$min_h6_font}px + (#{$max_h6_font} - #{$min_h6_font}) * ( (100vw - #{$min_width}px) / ( #{$max_width} - #{$min_width}) ));
+        line-height: calc(( #{$min_h6_font}px + (#{$max_h6_font} - #{$min_h6_font}) * ( (100vw - #{$min_width}px) / ( #{$max_width} - #{$min_width}) )) * 2);
+      }
+    }
+    @media (min-width: #{$max_width}px){
+      h6  { 
+        font-size: #{$max_h6_font}px;
+        line-height: calc( #{$max_h6_font}px * 2);
+      }
+    }
+    
+    //Tipografía títulos
+    h1, h2, h3, h4 {font-family: $CS-Hallelujah;}
+    //p & a
+
+    p, a {
+       font-size: 1.2em;
+    }
+    a {
+      font-family: $CS-Hallelujah;
+      color:$CS-font-color;
+      text-decoration: none;
+    }

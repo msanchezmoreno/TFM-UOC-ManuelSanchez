@@ -1,35 +1,24 @@
 {
-  "name": "Capybara Studio",
+  "name": "capybaraweb-2019",
   "version": "1.0.0",
-  "description": "Trabajo final de Master. Sitio web de Capybara Studio.",
-  "main": "gulpfile.js",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w sass/ -o css/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/msanchezmoreno/TFM-UOC-ManuelSanchez.git"
+    "url": "git+https://github.com/msanchezmoreno/CapybaraWeb-2019.git"
   },
-  "keywords": [
-    "web",
-    "design",
-    "graphic",
-    "design",
-    "ux",
-    "ui",
-    "accesibility",
-    "page",
-    "speed",
-    "sass"
-  ],
-  "author": "Manuel Sánchez Moreno",
-  "license": "GNU GENERAL PUBLIC LICENSE",
+  "author": "",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/msanchezmoreno/TFM-UOC-ManuelSanchez/issues"
+    "url": "https://github.com/msanchezmoreno/CapybaraWeb-2019/issues"
   },
-  "homepage": "https://github.com/msanchezmoreno/TFM-UOC-ManuelSanchez#readme",
-  "devDependencies": {
-    "gulp": "^4.0.1",
-    "gulp-sass": "^4.0.2"
-  }
+  "homepage": "https://github.com/msanchezmoreno/CapybaraWeb-2019#readme"
 }

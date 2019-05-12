@@ -1,0 +1,74 @@
+// FOOTER 
+
+ //Variables
+ $c-background-color:$c-fondo;
+ $CS-submenu-hover:$CS-grey;
+ $CS-rrss-hover:$CS-corporativo;
+
+    //Variables de dimensiones viewport
+    $min_width: 320;
+    $max_width: 1024;
+
+// Apariencia general
+footer {
+  background-color: $c-fondo;
+  -webkit-box-shadow: 0px -3px 6px -1px rgba(51,51,51,0.1);
+  -moz-box-shadow: 0px -3px 6px -1px rgba(51,51,51,0.1);
+  box-shadow: 0px 3px -6px -1px rgba(51,51,51,0.1);
+padding: 3rem 1.5rem;
+}
+
+
+    // Texto menú principal
+
+    $min_footer__menu-item: 12;
+    $max_footer__menu-item: 16; 
+
+  .nav_footer__menu-item {
+    font-size: #{$min_footer__menu-item}px;
+    transition: all 0.5s ease;
+  }
+    @media (min-width: #{$min_width}px) and (max-width: #{$max_width}px){
+      .nav_footer__menu-item { 
+        font-size: calc( #{$min_footer__menu-item}px + (#{$max_footer__menu-item} - #{$min_footer__menu-item}) * ( (100vw - #{$min_width}px) / ( #{$max_width} - #{$min_width}) ));
+      }
+    }
+    @media (min-width: #{$max_width}px){
+      .nav_footer__menu-item  { 
+        font-size: #{$max_footer__menu-item}px;
+      }
+    }
+  .nav_footer__menu-item:hover {
+     color: darken($CS-submenu-hover, 25%);
+  }
+    // Texto submenú
+
+    $min_footer__submenu-item: 9;
+    $max_footer__submenu-item: 14; 
+
+  .nav__submenu-item {
+    font-size: #{$min_footer__submenu-item}px;
+    transition: all 0.5s ease;
+  }
+    @media (min-width: #{$min_width}px) and (max-width: #{$max_width}px){
+      .nav__submenu-item { 
+        font-size: calc( #{$min_footer__submenu-item}px + (#{$max_footer__submenu-item} - #{$min_footer__submenu-item}) * ( (100vw - #{$min_width}px) / ( #{$max_width} - #{$min_width}) ));
+      }
+    }
+    @media (min-width: #{$max_width}px){
+      .nav__submenu-item  { 
+        font-size: #{$max_footer__submenu-item}px;
+      }
+    }
+  .nav__submenu-item:hover {
+    color: darken($CS-submenu-hover, 15%);
+  }
+
+// Redes sociales
+  .footer__rrss {
+    text-align: right;
+    font-size: 1.2em;
+  }
+  .footer__rrss-item:hover {
+    color:$CS-rrss-hover;
+  }

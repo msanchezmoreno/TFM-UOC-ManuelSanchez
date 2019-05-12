@@ -1,0 +1,15 @@
+name	"CAPYBARA STUDIO"
+short_name	"Capybara Studio"
+description	"CAPYBARA STUDIO es un estudio especializado en el diseño de páginas web, aplicaciones e identidades, creación de campañas de marketing digital y analítica de datos."
+icons	
+0	
+src	"https://www.capybarastudio.com/base-resources/favicon/capybara-icon.ico"
+sizes	"64x64"
+type	"image/ico"
+1	
+background_color	"#ffffff"
+theme_color	"#1bb3bc"
+display	"standalone"
+orientation	"any"
+start_url	"."
+scope	"/"
