@@ -1,3 +1,56 @@
 // HEADER
   // Variables
-  $c-background-color:$c-fondo;
+  $c-tags-font: $CS-font-primary;
+
+
+
+.portfolio_presentation {
+  h2 {
+    &:before {
+      content: url('../img/acento-portfolio.svg');
+      width: 275px;
+      height: 106px;
+      position: absolute;
+      z-index: -1;
+    }    
+  }
+}
+a .tag {
+    font-family: $c-tags-font;
+}
+.portfolio-site__link {
+  font-size: 1.5em;
+    &:before {        
+      content: url('../img/acento-portfolio.svg');
+      width: 85px;
+      position: absolute;
+      z-index: -1;
+      opacity: 0.7;
+      margin-left: -10px;
+    }
+    &:hover {
+      &:before {
+        opacity: 0.3;
+      }
+    }
+}
+.portfolio-showmore__link {
+  font-size: 1.5em;
+    &:hover {
+      color: #ffffff;
+    }
+    &:before {        
+      content: url('../img/acento-showmore.svg');
+      width: 140px;
+      position: absolute;
+      z-index: -1;
+      margin-left: -20px;
+      margin-top: -10px;
+    }
+    &:hover {
+      &:before {
+        opacity: 0.7;
+      }
+    }
+}
+

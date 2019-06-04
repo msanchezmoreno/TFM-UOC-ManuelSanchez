@@ -24,6 +24,7 @@
     $CS-font-primary:'Comfortaa', sans-serif, cursive;
     $CS-font-second:'Gloria Hallelujah', sans-serif, cursive;
     $CS-fsize: 14px;
+    $CS-light: lighter;
     $CS-strong: bolder;
 
     // Tamaños 
@@ -44,27 +45,45 @@
   $CS-center:center;
   $CS-right:right;
 
+//Dispositivos
+  $tablet:769;
+  $desktop:1024;
+
 // Clases colores fondo
 .c-lightgrey {background-color: $c-fondo;}
-.c-corporativo {background-color: $CS-corporativo}
-.c-about {background-color: $CS-about}
-.c-portfolio {background-color: $CS-portfolio}
-.c-contact {background-color: $CS-contact}
-.c-blog {background-color: $CS-blog}
+.c-corporativo {background-color: $CS-corporativo;}
+.c-about {background-color: $CS-about;}
+.c-portfolio {background-color: $CS-portfolio;}
+.c-contact {background-color: $CS-contact;}
+.c-blog {background-color: $CS-blog;}
 
 //Colores texto
-.c-t-blanco {color:$CS-blanco};
-.c-t-darkgrey {color:$CS-text};
-.c-t-grey {color:$CS-grey};
-.c-t-lightgrey {color:$CS-lightgrey};
-.c-t-corporativo {color:$c-fondo;};
-.c-t-about {color: $CS-about}
-.c-t-portfolio {color: $CS-portfolio}
-.c-t-contact {color: $CS-contact}
-.c-t-blog {color: $CS-blog}
+.c-t-blanco {color:$CS-blanco;}
+.c-t-darkgrey {color:$CS-text;}
+.c-t-grey {color:$CS-grey;}
+.c-t-lightgrey {color:$CS-lightgrey;}
+.c-t-corporativo {color:$CS-corporativo;}
+.c-t-about {color: $CS-about;}
+.c-t-portfolio {color: $CS-portfolio;}
+.c-t-contact {color: $CS-contact;}
+.c-t-blog {color: $CS-blog;}
+
+// Clases tipografía
+.c-acento {font-family:$CS-font-second;}
+.c-bold {font-weight:$CS-strong;}
+.c-light {font-weight:$CS-light;}
 
 // Clases posiciones
-.c-space-around {
-    display: flex;
-    justify-content: space-around;
-}
+.c-space-around {display: flex; justify-content: space-around;}
+.c-space-around-column {@media (max-width:#{$tablet}px){flex-direction: column;}}
+.c-space-between {display: flex; justify-content: space-between;}
+.c-row-reverse {flex-direction: row-reverse;}
+.c-row-reverse-tablet {@media (min-width:#{$tablet}px){flex-direction: row-reverse;}}
+.c-horizontal-center {justify-content: center;}
+.c-image-centered {margin-left: auto; margin-right: auto;}
+.c-t-centered {text-align: center;}
+
+//Profundidad
+.under-front {position: relative;z-index: -5;}
+.low-front {position: relative;z-index: 5;}
+.huge-front {position: relative;z-index: 20;}

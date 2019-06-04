@@ -1,3 +1,164 @@
-// HEADER
-  // Variables
-  $c-background-color:$c-fondo;
+// HOME
+
+    $CS-75: 75;
+    $CS-50: 50;
+    
+  //Variables de dimensiones viewport
+    $min_width: 320;
+    $max_width: 1024;
+    $tablet: 769;
+
+
+  //General
+  //Responsive
+  //Nav primera sección
+
+    $min_menu-hero__initial-item_font: 18;
+    $max_menu-hero__initial-item_font: 24; 
+
+    .menu-hero__initial-item  {
+        font-size: #{$min_menu-hero__initial-item_font}px;
+        line-height: calc( #{$min_menu-hero__initial-item_font}px * 3);
+        display: block;
+    }
+    @media (min-width: #{$min_width}px) and (max-width: #{$max_width}px){
+      .menu-hero__initial-item { 
+        font-size: calc( #{$min_menu-hero__initial-item_font}px + (#{$max_menu-hero__initial-item_font} - #{$min_menu-hero__initial-item_font}) * ( (100vw - #{$min_width}px) / ( #{$max_width} - #{$min_width}) ));
+        line-height: calc(( #{$min_menu-hero__initial-item_font}px + (#{$max_menu-hero__initial-item_font} - #{$min_menu-hero__initial-item_font}) * ( (100vw - #{$min_width}px) / ( #{$max_width} - #{$min_width}) )) * 3);
+      }
+    }
+    @media (min-width: #{$max_width}px){
+      .menu-hero__initial-item  { 
+        font-size: #{$max_menu-hero__initial-item_font}px;
+        line-height: calc( #{$max_menu-hero__initial-item_font}px * 3);
+      }
+    }
+
+.bt-home {
+    font-size: 1.4em;
+}
+
+
+.hero_inicial__logo {
+  width: 250px;
+  margin: auto;
+}
+
+.hero-initial__capybara-empresario {
+  max-width: 90%;
+  margin-left: -50px;
+}
+.hero-section__capybara-informatico {
+  max-width: 45%;
+}
+.hero-section__capybara-pintor {
+  max-width: 80%;
+
+}
+.hero-initial__capybara-empresario, .hero-section__capybara-informatico, .hero-section__capybara-pintor { 
+  min-width: 210px;
+}
+@media (min-width: #{$tablet}px) {
+  .hero-section__capybara-informatico {
+    max-width: 60%;
+  }
+}
+
+//FIRST MENU HERO SECTION
+
+.menu-hero__initial li {
+    &:before {
+      width: 165px;
+      height: 60px;
+      position: absolute;
+      margin-top: 10px;
+      left: -10px;
+      z-index: -1;
+    }
+    &:hover {
+      &:before {
+        opacity: 0.5;
+      }
+    }
+    &:first-child {
+      &:before {
+        content: url('../img/acento-itemsmenu-01.svg');
+      }
+      &:hover {
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
+    &:nth-child(2) {
+      &:hover {
+        &:before {
+          content: url('../img/acento-itemsmenu-02.svg');
+        }
+      }  
+    }
+    &:nth-child(3) {
+      &:hover {
+        &:before {
+          content: url('../img/acento-itemsmenu-03.svg');
+        }
+      } 
+    }
+    &:nth-child(4) {
+      &:hover {
+        &:before {
+          content: url('../img/acento-itemsmenu-04.svg');
+        }
+      } 
+    }
+    &:last-child {
+      &:hover {
+        &:before {
+          content: url('../img/acento-itemsmenu-05.svg');
+        }
+      } 
+    }
+}
+
+// BOTONES DE CONTENIDO
+.c-about-button, .c-portfolio-button {
+    font-size: 2em;
+    &:before {
+        width: 190px;
+        height: 50px;
+        position: absolute;
+        z-index: -1;
+    }
+}
+.c-about-button {
+    &:first-child {
+      &:before {
+        content: url('../img/acento-about.svg');
+        margin-top: -5px;
+      }
+    &:hover {
+      &:before {
+        opacity: 0.5;
+      }
+    }
+   }    
+  }
+.c-portfolio-button {
+    &:first-child {
+      &:before {
+	    content: url("../img/acento-portfolio.svg");
+	    -moz-transform: rotate(-30deg);
+	    -webkit-transform: rotate(-30deg);
+     	-o-transform: rotate(-30deg);
+	    -ms-transform: rotate(-30deg);
+     	transform: rotate(-30deg);
+	    margin-left: -30px;
+    	margin-top: -5px;
+      }
+    &:hover {
+      &:before {
+        opacity: 0.5;
+      }
+    }
+   }    
+  }

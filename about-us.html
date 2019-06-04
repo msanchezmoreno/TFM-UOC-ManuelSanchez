@@ -31,12 +31,14 @@
   
   <!-- Favicon -->
  
-  <link rel="icon" href="#" type="favicon.png" sizes="72x72">
+  <link rel="icon" href="img/favicon.png" type="image/x-icon" sizes="72x72">
 
   <!-- Estilos -->
-    <!-- Framework Bulma & Normalize -->
+    <!-- Framework Bulma & Normalize & AOS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" /> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" />
+    <link rel="stylesheet" href="css/bulma-extensions.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     
     <!-- Override personalizado -->
     <link rel="stylesheet" href="css/main.css">
@@ -46,6 +48,8 @@
 
 <body>
 
+  <div id="pageloader" class="pageloader is-active"><span class="title">CapybaraStudio</span></div>
+
   <!-- HEADER -->
   <header w3-include-html="header.html"></header>
     
@@ -54,81 +58,86 @@
   <main id="about-content" class="" data-namespace="www.capybarastudio.com">
     
     <!-- "¿QUÉ HACEMOS?" Presentación-->
-    <section id="about3" class="section hero is-fullheight">
+    <section id="about1" class="section hero is-fullheight">
         
-      <div class="hero-body">
+      <div class="hero-body is-paddingless about_presentation">
         <div class="container">
-          <div class="columns is-vcentered">
-            <div class="column is-8">
-              <img src="img/cs_informatico.svg" class="" alt="" width="400">
-            </div> 
+          <div class="columns is-vcentered c-row-reverse-tablet">
             <div class="column">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra mauris sem, sed vehicula dui accumsan id. Etiam lobortis, libero fermentum consectetur egestas, dolor ante placerat eros, in sollicitudin nibh orci in urna.</p>
-              <p><a href="#">¿Qué hacemos?</a></p>
+              <h2 class="is-flex c-horizontal-center m-b-xl is-hidden-tablet low-front">¿Qué hacemos?</h2>
+              <img src="img/cs_informatico.svg" class="hero-section__capybara-informatico is-flex c-image-centered float" alt="Capybara informático en una mesa con su ordenador y el smartphone" width="300" data-aos="zoom-out">
+            </div> 
+            <div class="column p-r-md p-l-md" data-aos="fade-up">
+              <h2 class="is-flex c-horizontal-center m-b-xl is-hidden-mobile low-front">¿Qué hacemos?</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra mauris sem, sed vehicula dui accumsan id. Etiam lobortis, placerat eros, in sollicitudin nibh orci in urna.</p>
+              <p>Lorem ipsum dolor sit amet, eros, in sollicitudin nibh orci in urna.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra mauris sem, sed vehicula dui accumsan id. Etiam lobortis, libero fermentum consectetur egestas, dolor ante placerat eros.</p>
             </div>   
          </div>
         </div>
       </div>
+      <div class="hero-foot">
+        <div class="container">
+          <div class="tabs is-centered">
+            <ul>
+              <li><a href="#about2"><i class="cs-icon-scroll-down animated bounce"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>  
         
     </section>
       
     <!-- "Servicios" section-->
     <section id="about2" class="section hero is-fullheight">
         
-      <div class="hero-body">
+      <div class="hero-body is-paddingless about_services">
         <div class="container">
-          <div class="columns is-vcentered">
-            <div class="column">
-              <h4>DISEÑO WEB</h4>
-              <span class="cs-icon-diseño-web"></span>
+          <div class="columns is-multiline is-vcentered">
+            <div class="column" data-aos="fade-right">
+              <h4 class="c-t-centered is-block">DISEÑO WEB</h4>
+              <i class="c-t-centered is-block cs-icon-diseno-web about_services--icon"></i>
             </div>
-            <div class="column">
-              <h4>DESARROLLO SOFTWARE</h4>
-              <span class="cs-icon-desarrollo-software"></span>
-            </div>   <div class="column">
-              <h4>DISEÑO GRÁFICO</h4>
-              <span class="cs-icon-diseño-grafico"></span>
-            </div>  
-          </div>
-          <div class="columns is-vcentered">
-            <div class="column">
-              <h4>ANALÍTICA WEB</h4>
-              <span class="cs-icon-analitica-web"></span>
-            </div>
-            <div class="column">
-              <h4>MARKETING DIGITAL</h4>
-              <span class="cs-icon-marketing-digital"></span>
+            <div class="column" data-aos="fade-up">
+              <h4 class="c-t-centered is-block">DESARROLLO SOFTWARE</h4>
+              <i class="c-t-centered is-block cs-icon-desarrollo-software about_services--icon"></i>
             </div>   
-            <div class="column">
-              <a href="#">Portfolio</a>
+            <div class="column" data-aos="fade-left">
+              <h4 class="c-t-centered is-block">DISEÑO GRÁFICO</h4>
+              <i class="c-t-centered is-block cs-icon-diseno-grafico about_services--icon"></i>
+            </div>  
+            <div class="column" data-aos="fade-right">
+              <h4 class="c-t-centered is-block">ANALÍTICA WEB</h4>
+              <i class="c-t-centered is-block cs-icon-analitica-web about_services--icon"></i>
+            </div>
+            <div class="column" data-aos="fade-up">
+              <h4 class="c-t-centered is-block">MARKETING DIGITAL</h4>
+              <i class="c-t-centered is-block cs-icon-marketing-digital about_services--icon"></i>
+            </div>   
+            <div class="column" data-aos="fade-left">
+              <a href="portfolio.html" class="c-t-centered is-block low-front  c-portfolio-button m-b-xl">Portfolio</a>
             </div>  
            </div>       
           </div>
-      </div>
-        
-    </section>
+      </div>    
+      <a class="is-flex c-horizontal-center is-block m-t-lg" href="#about1"><i class="cs-icon-scroll-top animated bounce"></i></a>
 
+    </section>
   </main>
       
   <!-- FOOTER -->
   <footer class="p-lg" w3-include-html="footer.html"></footer>
     
-  
     
   <!-- Scripts --> 
     
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/vendor/bulma-extensions.min.js"></script>
   <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script  src="js/main.js"></script>
   <script>includeHTML();</script>
-    
-  <!-- Seguimiento Google Analytics -->
-  
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+  <script  src="js/mobile.js"></script> 
     
 </body>
 

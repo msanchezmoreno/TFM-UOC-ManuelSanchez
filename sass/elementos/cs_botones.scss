@@ -1,1 +1,7 @@
-/* BOTONES */
+// BOTONES
+
+//Portfolio
+.c-portfolio-button:before {
+    content: '';
+    background: url(../../img/acento-portfolio.svg);
+}

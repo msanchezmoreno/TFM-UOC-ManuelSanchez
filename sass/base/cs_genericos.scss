@@ -22,7 +22,7 @@ html, body {
   font-size: $CS-general-font-size;
   font-family: $CS-comforta;
   color:$CS-font-color;
-  background-color: $CS-blanco;
+  background-image: url('../img/background-pattern.svg');
 }
 
 // FUENTES GENERALES
@@ -163,10 +163,13 @@ html, body {
     
     //Tipografía títulos
     h1, h2, h3, h4 {font-family: $CS-Hallelujah;}
+
     //p & a
 
     p, a {
-       font-size: 1.2em;
+      font-size: 1.2em;
+      line-height: 1.4em;
+      margin-top: 10px;
     }
     a {
       font-family: $CS-Hallelujah;

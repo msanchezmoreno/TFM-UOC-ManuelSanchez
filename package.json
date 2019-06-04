@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "bulma-extensions": "^6.2.7",
+    "bulma-steps": "^2.2.1",
     "node-sass": "^4.12.0"
   },
   "devDependencies": {},

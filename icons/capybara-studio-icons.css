@@ -10,7 +10,7 @@
   font-style: normal;
 }
  
- [class^="cs-icon-"]:before, [class*=" cs-icon-"]:before {
+ [class^="cs-icon-"]:after, [class*=" cs-icon-"]:after {
   font-family: "capybara-studio-icons";
   font-style: normal;
   font-weight: normal;
@@ -34,18 +34,18 @@
  
 }
  
-.cs-icon-instagram:before { content: '\c009'; } /* '쀉' */
-.cs-icon-git:before { content: '\c010'; } /* '쀐' */
-.cs-icon-marketing-digital:before { content: '\c011'; } /* '쀑' */
-.cs-icon-analitica-web:before { content: '\c012'; } /* '쀒' */
-.cs-icon-desarrollo-software:before { content: '\c013'; } /* '쀓' */
-.cs-icon-diseño-grafico:before { content: '\c014'; } /* '쀔' */
-.cs-icon-diseño-web:before { content: '\c015'; } /* '쀕' */
-.cs-icon-phone:before { content: '\e800'; } /* '' */
-.cs-icon-map:before { content: '\e801'; } /* '' */
-.cs-icon-search-glass:before { content: '\e802'; } /* '' */
-.cs-icon-scroll-top:before { content: '\e803'; } /* '' */
-.cs-icon-scroll-down:before { content: '\e804'; } /* '' */
-.cs-icon-email:before { content: '\e805'; } /* '' */
-.cs-icon-facebook:before { content: '\e806'; } /* '' */
-.cs-icon-feed-rrss:before { content: '\e807'; } /* '' */
+.cs-icon-instagram:after { content: '\c009'; position: relative; z-index: 10;} /* '쀉' */
+.cs-icon-git:after { content: '\c010'; position: relative; z-index: 10; } /* '쀐' */
+.cs-icon-marketing-digital:after { content: '\c011'; position: relative; z-index: 10; } /* '쀑' */
+.cs-icon-analitica-web:after { content: '\c012'; position: relative; z-index: 10; } /* '쀒' */
+.cs-icon-desarrollo-software:after { content: '\c013'; position: relative; z-index: 10; } /* '쀓' */
+.cs-icon-diseno-grafico:after { content: '\c014'; position: relative; z-index: 10; } /* '쀔' */
+.cs-icon-diseno-web:after { content: '\c015'; position: relative; z-index: 10; } /* '쀕' */
+.cs-icon-phone:after { content: '\e800'; position: relative; z-index: 10; } /* '' */
+.cs-icon-map:after { content: '\e801'; position: relative; z-index: 10; } /* '' */
+.cs-icon-search-glass:after { content: '\e802'; position: relative; z-index: 10; } /* '' */
+.cs-icon-scroll-top:after { content: '\e803'; font-size: 3.5em; position: relative; z-index: 10;} /* '' */
+.cs-icon-scroll-down:after { content: '\e804'; font-size: 5em; position: relative; z-index: 10; } /* '' */
+.cs-icon-email:after { content: '\e805'; position: relative; z-index: 10; } /* '' */
+.cs-icon-facebook:after { content: '\e806'; position: relative; z-index: 10; } /* '' */
+.cs-icon-feed-rrss:after { content: '\e807'; position: relative; z-index: 10; } /* '' */

@@ -1,3 +1,112 @@
-// HEADER
-  // Variables
-  $c-background-color:$c-fondo;
+// Variables
+  $c-backcard:$c-fondo;
+  $c-white:$CS-blanco;
+  $CS-overlay:$CS-corporativo;
+
+.blog_presentation {
+  h2 {
+    &:before {
+      content: url('../img/acento-blog.svg');
+      width: 275px;
+      height: 106px;
+      position: absolute;
+      z-index: -1;
+    }    
+  }
+  .cs-icon-search-glass {
+    &:after {
+      top: -42px;
+      right: 10px;
+    }  
+  }
+}
+.blog_posts {
+  .blog_post--headcard {
+    &:hover {
+      .overlay {
+        opacity: 0.8;
+      }
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: .3s ease;
+      background-color: $CS-overlay;
+        &:after {
+          content: '\e802';
+          font-family: 'capybara-studio-icons';
+          color: $c-white;
+          font-size: 6em;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          text-align: center;
+        }
+    }
+
+}
+  .card-content {
+    background: $c-backcard;
+  }
+  .hastagh_tag--post {
+    background: $c-white!important;
+  }
+}
+.blog_newsletter, .guided-form--content {
+  label {
+    a {
+      font-weight: bolder;
+      color: $c-white; 
+        &:hover {
+          color: $c-white;
+          opacity: 0.8;
+        }
+      }
+    }
+}
+.blog_newsletter {
+    .blog_newsletter--submit {
+      &:hover {
+        &:before {
+          opacity: 0.8;
+        }      
+      }
+      &:before {
+        content: url('../img/acento-submit.svg');
+        width: 160px;
+        position: absolute;
+        margin-left: -30px;
+        z-index: -1;
+      }      
+    }
+
+  .input {
+    &:focus {
+      border-color: $c-white;
+      box-shadow: 0 0 0 .125em rgba(255, 255, 255,.85);
+    }
+  }
+}
+
+
+.input, .textarea {
+  &:hover {
+    border-color: $c-backcard;
+  } 
+  &:focus {
+    border-color: $CS-overlay;
+    box-shadow: 0 0 0 .125em rgba(14, 167, 179,.25);
+  }
+}
+.input {
+  height: 40px;
+
+}

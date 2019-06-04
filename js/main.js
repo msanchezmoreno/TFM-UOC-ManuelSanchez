@@ -1,15 +1,4 @@
-// MENÚ MÓVIL
-(function($) {
-  $(function() {
-    $('.toggle-overlay').click(function() {
-      $('.navbar_mobile').toggleClass('navbar_mobile--open');
-    });
-  });
-})(jQuery);
-
-$(".button_toggle").click(function(){
-   $(this).toggleClass("button_toggle--rotate");
-})
+AOS.init();
 
 // INCLUDES HTML
 function includeHTML() {
@@ -23,7 +12,7 @@ function includeHTML() {
       xhttp.onreadystatechange = function() {
         if (this.readyState == 4) {
           if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          if (this.status == 404) {elmnt.innerHTML = "Página no encontrada.";}
           elmnt.removeAttribute("w3-include-html");
           includeHTML();
         }
@@ -34,3 +23,77 @@ function includeHTML() {
     }
   }
 };
+
+// MENU STICKY AFTER INITIAL SECTION
+
+$(window).scroll(function() {
+  var header = $(document).scrollTop();
+  var headerHeight = $(".navbar_desktop").outerHeight();
+  var firstSection = $(".main-container section:nth-of-type(1)").outerHeight();
+  
+  if (header < firstSection) {
+    $(".navbar_desktop").addClass("navbar_desktop-view");
+  } else {
+    $(".navbar_desktop").removeClass("navbar_desktop-view");
+  }
+});
+
+
+$("#selector-dw").click(ocultar);
+
+function ocultar(){
+    $(".dw").css({"display":"none"});
+}
+
+
+//SPINNER
+
+function showAndHideSpinner(){
+  setTimeout ("", 1500); 
+  $("#pageloader").removeClass("is-active");
+}
+
+// ACTIVE ITEMS MENU ESCRITORIO
+
+$(window).on('load', function(){ 
+  showAndHideSpinner();
+  var path = window.location.pathname;
+  switch(path) {
+    case "index.html":
+      $("#navitem-home-desk").addClass("nav_menu--active");
+      break;
+    case "about-us.html":
+      $("#navitem-about-desk").addClass("nav_menu--active");
+      break;
+    case "portfolio.html":
+      $("#navitem-portfolio-desk").addClass("nav_menu--active");
+      break;
+    case "blog.html":
+      $("#navitem-blog-desk").addClass("nav_menu--active");
+      break;
+    case "contacto.html":
+      $("#navitem-contacto-desk").addClass("nav_menu--active");
+      break;
+        case "index.html":
+      $("#navitem-home-mobile").addClass("nav_menu--active");
+      break;
+    case "about-us.html":
+      $("#navitem-about-mobile").addClass("nav_menu--active");
+      break;
+    case "portfolio.html":
+      $("#navitem-portfolio-mobile").addClass("nav_menu--active");
+      break;
+    case "blog.html":
+      $("#navitem-blog-mobile").addClass("nav_menu--active");
+      break;
+    case "contacto.html":
+      $("#navitem-contacto-mobile").addClass("nav_menu--active");
+      break;
+    default:
+  }
+
+});
+
+
+
+

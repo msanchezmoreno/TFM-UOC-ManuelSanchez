@@ -37,6 +37,8 @@
     <!-- Framework Bulma & Normalize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" /> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" />
+    <link rel="stylesheet" href="css/bulma-extensions.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     
     <!-- Override personalizado -->
     <link rel="stylesheet" href="css/main.css">
@@ -45,95 +47,92 @@
 </head>
 
 <body>
-
+  <div id="pageloader" class="pageloader is-active"><span class="title">CapybaraStudio</span></div>
   <!-- HEADER -->
-  <header w3-include-html="header.html"></header>
+  <header id="stickyHeader" w3-include-html="header.html"></header>
     
   <!-- CONTENIDO Portfolio -->
 
-  <main id="portfolio-content" class="" data-namespace="www.capybarastudio.com">
+  <main id="portfolio-content" data-namespace="www.capybarastudio.com">
     
     <!-- "PORTFOLIO" Presentación-->
-    <section id="portfolio1" class="section hero is-fullheight">
+    <section id="portfolio1" class="section hero is-fullheight portfolio_presentation">
         
       <div class="hero-body">
         <div class="container">
           <div class="columns is-vcentered">
-            <div class="column">
-              <a href="#">¿Qué hacemos?</a>
-              <img src="img/cs_informatico.svg" class="" alt="" width="400">
+            <div class="column is-7" data-aos="fade-up-right">
+              <h2 class="c-t-centered is-block m-b-xl low-front">Portfolio</h2>
+              <img src="img/cs_pintor.svg" class="hero-section__capybara-pintor is-flex c-image-centered float" alt="Capybara pintor pintando un cuadra de la Mona Lisa Capybara">
             </div>
               
-              <!-- PROVISIONAL TAGS -->
+            <!-- FILTER TAGS -->
             <div class="column">
-              <div id="meta" class="field is-grouped is-grouped-multiline">
+              <div id="meta" class="field is-grouped-multiline portfolio-filter__tags" data-aos="fade-down-left">
 
-              <div class="control">
-                <div class="tags has-addons">
-                  <span class="tag">Tag</span>
+                <div class="tags are-large c-space-around p-r-md p-l-md">
+                  <a href="#"><span onclick="filtrar('dw',this.id);" id="selector-dw" class="tag m-t-md m-b-md">Diseño web</span></a>             
+                  <a href="#"><span onclick="filtrar('dg',this.id);" id="selector-dg" class="tag m-t-md m-b-md">Diseño gráfico</span></a>
+                  <a href="#"><span onclick="filtrar('md',this.id);" id="selector-md" class="tag m-t-md m-b-md">Marketing digital</span></a>
+                  <a href="#"><span onclick="filtrar('ds',this.id);" id="selector-ds" class="tag m-t-md m-b-md">Desarrollo de software</span></a>
+                  <a href="#"><span onclick="filtrar('aw',this.id);" id="selector-aw" class="tag m-t-md m-b-md">Analítica web</span></a>
                 </div>
-              </div>
-              <div class="control">
-                <div class="tags has-addons">
-                  <span class="tag">Tag</span>
-                </div>
-              </div>
-              <div class="control">
-                <div class="tags has-addons">
-                  <span class="tag">Tag</span>
-                </div>
-              </div>
-                            <div class="control">
-                <div class="tags has-addons">
-                  <span class="tag">Tag</span>
-                </div>
-              </div>
-              <div class="control">
-                <div class="tags has-addons">
-                  <span class="tag">Tag</span>
-                </div>
-              </div>
-              <div class="control">
-                <div class="tags has-addons">
-                  <span class="tag">Tag</span>
-                </div>
-              </div>
+                  
             </div>
             </div>   
          </div>
         </div>
       </div>
-        
+      <div class="hero-foot">
+        <div class="container">
+          <div class="tabs is-centered">
+            <ul>
+              <li><a href="#portfolio2"><i class="cs-icon-scroll-down animated bounce"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>    
     </section>
       
     <!-- "Servicios" section-->
-    <section id="about2" class="section">
+    <section id="portfolio2" class="section">
         
-        <div class="container">
-          <div class="columns is-vcentered">
-            <div class="column">
-              <h3>PORTFOLIO PROYECTO 1</h3>
+        <div class="container dw dg">
+          <div class="columns is-vcentered p-t-xl p-b-xl">
+            <div class="column" data-aos="zoom-in">
+              <h3>Página web</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra mauris sem.</p>
-              <a href="#">Enlace</a>
+               <div class="tags are-medium m-r-lg">
+                  <a href="#"><span class="tag m-r-sm">Diseño web</span></a>             
+                  <a href="#"><span class="tag m-r-sm">Diseño gráfico</span></a>
+                </div>
             </div>
-            <div class="column">
-              <img src="img/portfolio1.png" width="100%" height="auto">
-          </div>      
+            <div class="column is-8" data-aos="zoom-in-left">
+                <a href="#"><img src="img/portfolio1.png" width="100%" height="auto"></a>
+              <a class="is-flex c-horizontal-center m-t-lg low-front portfolio-site__link" href="#">Visitar</a> 
+            </div>
           </div>
         </div>
-        <div class="container">
-          <div class="columns is-vcentered">
-            <div class="column">
-              <img src="img/portfolio2.png" width="100%" height="auto">
-            </div>
-            <div class="column">
-              <h3>PORTFOLIO PROYECTO 2</h3>
+        <div class="container ds">
+          <div class="columns is-vcentered c-row-reverse-tablet p-t-xl p-b-xl">
+            <div class="column" data-aos="zoom-in">
+              <h3>Identidad gráfica</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra mauris sem.</p>
-              <a href="#">Enlace</a>
-          </div>      
+                <div class="tags are-medium">            
+                  <a href="#"><span class="tag m-t-md">Desarrollo de software</span></a>
+                </div>
+            </div>
+            <div class="column is-7" data-aos="zoom-in-right">
+              <a href="#"><img src="img/portfolio2.png" width="100%" height="auto"></a>
+              <a class="is-flex c-horizontal-center m-t-lg low-front portfolio-site__link" href="#">Visitar</a> 
+            </div>
           </div>
         </div>
         
+        <a class="is-flex c-horizontal-center m-t-lg low-front portfolio-showmore__link c-t-blanco" href="#" data-aos="zoom-in">Ver más</a> 
+        <a class="is-flex c-horizontal-center is-block m-t-xl" href="#portfolio1"><i class="cs-icon-scroll-top animated bounce"></i></a>
+
+
     </section>
 
   </main>
@@ -146,17 +145,13 @@
   <!-- Scripts --> 
     
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/vendor/bulma-extensions.min.js"></script>
   <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script  src="js/main.js"></script>
   <script>includeHTML();</script>
-    
-  <!-- Seguimiento Google Analytics -->
-  
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+  <script  src="js/mobile.js"></script>
+  <script  src="js/filter.js"></script>
     
 </body>
 

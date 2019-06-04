@@ -1,3 +1,147 @@
-// HEADER
-  // Variables
-  $c-background-color:$c-fondo;
+//CONTACTO
+//Variables
+    $itembox-font:$CS-Hallelujah;
+    $white:$CS-blanco;
+    $activecolor:$CS-about;
+    $activeitem:$CS-blog;
+.contact_presentation {
+  h2 {
+    &:before {
+      content: url('../img/acento-contacto.svg');
+      width: 275px;
+      height: 106px;
+      position: absolute;
+      z-index: -1;
+     -moz-transform: rotate(10deg);
+     -webkit-transform: rotate(10deg);
+     -o-transform: rotate(10deg);
+     -ms-transform: rotate(10deg);
+     transform: rotate(10deg);
+    }    
+  }
+    .contact_form--send {
+      &:hover {
+        &:before {
+          opacity: 0.7;
+        }      
+      }
+      &:before {
+        content: url('../img/acento-form.svg');
+        width: 100px;
+        position: absolute;
+        margin-left: -30px;
+        z-index: -1;
+      }      
+    }
+  .contact_information {
+    width: 100%;
+    height: 220px;
+    flex-direction: column;
+      i {
+          font-size: 2em;
+          position: relative;
+          top: 4px;
+      }
+  }
+}
+
+
+//Guided Form
+
+.guided-form--content {
+  .guided-form__items {
+    .guided-form__item-box {
+        background: $white;
+        font-family: $itembox-font;
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding:0 5px 15px;
+        margin-right: 10px;
+        cursor: pointer;
+        -webkit-box-shadow: 0px 0px 11px 0px rgba(50, 50, 50, 0.34);
+        -moz-box-shadow:    0px 0px 11px 0px rgba(50, 50, 50, 0.34);
+        box-shadow:         0px 0px 11px 0px rgba(50, 50, 50, 0.34);
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out; 
+      &:hover {
+        -moz-transform: scale(1.05);
+        -webkit-transform: scale(1.05);
+        -o-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        transform: scale(1.05);
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;  
+      }
+      &:before {
+        font-family: "capybara-studio-icons";
+        position: relative;
+        font-size: 7em;
+        display: block;
+      }
+      &:first-child {
+        &:before {
+          content: '\c015';
+          font-size: 6em;
+          margin-bottom: 21px;
+        }
+      }
+      &:nth-child(2) {
+        &:before {
+          content: '\c013';
+        }  
+      }
+      &:nth-child(3) {
+        &:before {
+          content: '\c014';
+        }
+      } 
+      &:nth-child(4) {
+        &:before {
+          content: '\c012';
+        } 
+      }
+      &:last-child {
+        &:before {
+          content: '\c011';
+        }
+      } 
+    }
+  }
+  .guided_form--submit {
+     &:hover {
+        &:before {
+          opacity: 0.8;
+        }      
+     }
+     &:before {
+        content: url('../img/acento-submit.svg');
+        width: 120px;
+        position: absolute;
+        margin-left: -30px;
+        top:5px;
+        z-index: -1;
+      }      
+    }
+}
+.guided-form__box-active {
+    border: 2px solid $activecolor;
+}
+
+//Override
+.steps .step-item:not(:first-child)::before {
+	display: none;
+}
+.steps .step-item .step-marker {
+	height: 1em;
+	width: 1em;
+	border: none;
+	background: #d5d5d5;
+}
+.steps .step-item.is-completed .step-marker {
+   background: $activeitem;
+}
