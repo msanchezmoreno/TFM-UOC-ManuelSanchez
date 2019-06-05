@@ -37,7 +37,7 @@
     <!-- Framework Bulma & Normalize -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" /> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" />
-    <link rel="stylesheet" href="css/bulma-extensions.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-pageloader@2.1.0/dist/css/bulma-pageloader.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     
     <!-- Override personalizado -->
@@ -46,16 +46,20 @@
   
 </head>
 
-<body>
-  <div id="pageloader" class="pageloader is-active"><span class="title">CapybaraStudio</span></div>
-  <!-- HEADER -->
-  <header id="stickyHeader" w3-include-html="header.html"></header>
+<body id="portfolio">
     
-  <!-- CONTENIDO Portfolio -->
+  <div id="pageloader" class="pageloader is-active"><span class="title">CapybaraStudio</span></div>
+    
+  <!-- HEADER -->
+  <?php
+  include("header.php")
+  ?>
+    
+  <!-- CONTENIDO -->
 
   <main id="portfolio-content" data-namespace="www.capybarastudio.com">
     
-    <!-- "PORTFOLIO" Presentación-->
+    <!-- Presentación -->
     <section id="portfolio1" class="section hero is-fullheight portfolio_presentation">
         
       <div class="hero-body">
@@ -94,7 +98,7 @@
       </div>    
     </section>
       
-    <!-- "Servicios" section-->
+    <!-- PROYECTOS -->
     <section id="portfolio2" class="section">
         
         <div class="container dw dg">
@@ -132,24 +136,24 @@
         <a class="is-flex c-horizontal-center m-t-lg low-front portfolio-showmore__link c-t-blanco" href="#" data-aos="zoom-in">Ver más</a> 
         <a class="is-flex c-horizontal-center is-block m-t-xl" href="#portfolio1"><i class="cs-icon-scroll-top animated bounce"></i></a>
 
-
     </section>
 
   </main>
       
   <!-- FOOTER -->
-  <footer class="p-lg" w3-include-html="footer.html"></footer>
-    
-  
+
+  <?php
+  include("footer.php")
+  ?>
     
   <!-- Scripts --> 
     
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="js/vendor/bulma-extensions.min.js"></script>
-  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/js/bulma-extensions.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script  src="js/main.js"></script>
-  <script>includeHTML();</script>
+  <script  src="js/spinner.js"></script>
+  <script  src="js/active.js"></script>
+  <script  src="js/sticky.js"></script>
   <script  src="js/mobile.js"></script>
   <script  src="js/filter.js"></script>
     

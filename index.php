@@ -37,7 +37,7 @@
     <!-- Framework Bulma & Normalize & AOS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" /> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" />
-    <link rel="stylesheet" href="css/bulma-extensions.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-pageloader@2.1.0/dist/css/bulma-pageloader.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     
     <!-- Override personalizado -->
@@ -47,16 +47,20 @@
 </head>
 
 <body id="home">
-  <div id="pageloader" class="pageloader is-active"><span class="title">CapybaraStudio</span></div>
-  <!-- HEADER -->
-  <header class="header" w3-include-html="header.html"></header>
     
-  <!-- CONTENIDO HOME -->
+  <div id="pageloader" class="pageloader is-active"><span class="title">CapybaraStudio</span></div>
+  
+  <!-- HEADER -->
+
+  <?php
+  include("header.php")
+  ?>
+    
+  <!-- CONTENIDO -->
 
   <main id="homepage-content" class="main-container" data-namespace="www.capybarastudio.com">
 
-      <!-- INICIO-->
-    
+    <!-- INICIO-->
     <section id="home1" class="section hero is-fullheight section__presentation-home">
         
       <div class="hero-head">
@@ -81,10 +85,10 @@
                   <nav class="menu-hero__initial">
                       <ul>
                         <li><a class="menu-hero__initial-item" href="#home3">Home</a></li>
-                        <li><a class="menu-hero__initial-item" href="about-us.html">¿Qué hacemos?</a></li>
-                        <li><a class="menu-hero__initial-item" href="portfolio.html">Portfolio</a></li>
-                        <li><a class="menu-hero__initial-item" href="blog.html">Blog</a></li>
-                        <li><a class="menu-hero__initial-item" href="contacto.html">Contacto</a></li>
+                        <li><a class="menu-hero__initial-item" href="about-us.php">¿Qué hacemos?</a></li>
+                        <li><a class="menu-hero__initial-item" href="portfolio.php">Portfolio</a></li>
+                        <li><a class="menu-hero__initial-item" href="blog.php">Blog</a></li>
+                        <li><a class="menu-hero__initial-item" href="contacto.php">Contacto</a></li>
                       </ul>
                   </nav>
                 </div>
@@ -119,7 +123,7 @@
             </div>    
             <div class="column p-r-lg p-l-lg" data-aos="fade-up">
               <p>Lorem ipsum dolor sit amet, <span class="c-acento c-t-about">consectetur adipiscing</span> elit. Sed pharetra mauris sem, sed vehicula dui accumsan id. Etiam lobortis, libero fermentum consectetur egestas, dolor ante placerat eros, in sollicitudin nibh orci in urna.</p>
-              <p><a href="about-us.html" class="c-t-centered is-block bt-home c-about-button m-t-lg">¿Qué hacemos?</a></p>
+              <p><a href="about-us.php" class="c-t-centered is-block bt-home c-about-button m-t-lg">¿Qué hacemos?</a></p>
             </div>
          </div>
         </div>
@@ -146,7 +150,7 @@
             </div> 
             <div class="column p-r-lg p-l-lg" data-aos="fade-up">
               <p>Lorem ipsum dolor sit amet, <span class="c-acento c-t-portfolio">consectetur adipiscing</span> elit. Sed pharetra mauris sem, sed vehicula dui accumsan id. Etiam lobortis, libero fermentum consectetur egestas.</p>
-              <p><a href="portfolio.html" class="is-pulled-right bt-home c-portfolio-button m-t-lg m-r-xl">Portfolio</a></p>
+              <p><a href="portfolio.php" class="is-pulled-right bt-home c-portfolio-button m-t-lg m-r-xl">Portfolio</a></p>
             </div>   
          </div>
         </div>
@@ -165,18 +169,19 @@
   </main>
       
   <!-- FOOTER -->
-  <footer class="p-lg" w3-include-html="footer.html"></footer>
-    
-  
-    
+
+  <?php
+  include("footer.php")
+  ?>
+       
   <!-- Scripts --> 
     
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="js/vendor/bulma-extensions.min.js"></script>
-  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/js/bulma-extensions.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script  src="js/main.js"></script>
-  <script>includeHTML();</script>
+  <script  src="js/spinner.js"></script>
+  <script  src="js/sticky.js"></script>
+  <script  src="js/active.js"></script>
   <script  src="js/mobile.js"></script>
     
 </body>

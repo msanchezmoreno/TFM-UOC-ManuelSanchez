@@ -37,7 +37,7 @@
     <!-- Framework Bulma & Normalize & AOS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" /> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" />
-    <link rel="stylesheet" href="css/bulma-extensions.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-pageloader@2.1.0/dist/css/bulma-pageloader.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     
     <!-- Override personalizado -->
@@ -47,11 +47,15 @@
 </head>
 
 <body>
-
+    
   <div id="pageloader" class="pageloader is-active"><span class="title">CapybaraStudio</span></div>
-
+  
   <!-- HEADER -->
-  <header w3-include-html="header.html"></header>
+
+  <?php
+  include("header.php")
+  ?>
+    
     
   <!-- CONTENIDO About -->
 
@@ -115,7 +119,7 @@
               <i class="c-t-centered is-block cs-icon-marketing-digital about_services--icon"></i>
             </div>   
             <div class="column" data-aos="fade-left">
-              <a href="portfolio.html" class="c-t-centered is-block low-front  c-portfolio-button m-b-xl">Portfolio</a>
+              <a href="portfolio.php" class="c-t-centered is-block low-front  c-portfolio-button m-b-xl">Portfolio</a>
             </div>  
            </div>       
           </div>
@@ -126,18 +130,20 @@
   </main>
       
   <!-- FOOTER -->
-  <footer class="p-lg" w3-include-html="footer.html"></footer>
-    
-    
+
+  <?php
+  include("footer.php")
+  ?>
+       
   <!-- Scripts --> 
     
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="js/vendor/bulma-extensions.min.js"></script>
-  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/js/bulma-extensions.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script  src="js/main.js"></script>
-  <script>includeHTML();</script>
-  <script  src="js/mobile.js"></script> 
+  <script  src="js/spinner.js"></script>
+  <script  src="js/sticky.js"></script>
+  <script  src="js/active.js"></script>
+  <script  src="js/mobile.js"></script>
     
 </body>
 
