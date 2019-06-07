@@ -202,7 +202,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/dist/js/bulma-extensions.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script  src="js/spinner.js"></script>
-  <script  src="js/sticky.js"></script>
   <script  src="js/active.js"></script>
   <script  src="js/mobile.js"></script>
   <script  src="js/guided-form.js"></script>

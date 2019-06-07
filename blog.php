@@ -212,7 +212,6 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script  src="js/spinner.js"></script>
   <script  src="js/active.js"></script>
-  <script  src="js/sticky.js"></script>
   <script  src="js/mobile.js"></script>
     
 </body>

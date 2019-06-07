@@ -1,7 +1,7 @@
 <header>
     
     <!-- Navegación escritorio -->
-    <nav class="navbar is-fixed-top is-hidden-touch is-flex-desktop level navbar_desktop p-r-lg p-l-lg p-t-md p-b-md c-lightgrey" aria-label="Main Navigation">
+    <nav id="navbar-desk" class="navbar is-fixed-top is-hidden-touch is-flex-desktop level navbar_desktop p-r-lg p-l-lg p-t-md p-b-md c-lightgrey" aria-label="Main Navigation">
 
         <div class="level-left">
           <a class="level-item">
@@ -19,8 +19,8 @@
     </nav>
 
     <!--  Navegación móvil -->
-    <button class="toggle-overlay button_toggle is-hidden-desktop c-corporativo"><span></span></button>
-    <nav class="navbar is-fixed-top is-hidden-desktop navbar_mobile" aria-label="Mobile Navigation">
+    <button id="button_menu-mobile" class="toggle-overlay button_toggle is-hidden-desktop c-corporativo"><span></span></button>
+    <nav id="navbar-mobile" class="navbar is-fixed-top is-hidden-desktop navbar_mobile" aria-label="Mobile Navigation">
       <div class="outer-close toggle-overlay"></div>
       <img src="img/logo-capybarastudio.svg" width="250" alt="Logo de Capybara Studio">
       <ul class="navbar_mobile__ul">

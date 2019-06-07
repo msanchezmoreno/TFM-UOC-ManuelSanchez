@@ -1,12 +1,10 @@
 AOS.init();
 
-// ACTIVE ITEMS MENU ESCRITORIO
-
+// ACTIVE ITEMS MENU ESCRITORIO/MOVIL
   var path = window.location.pathname;
-  console.log(path);
   switch(path) {
     case "/index.php":
-      $(".navbar_desktop").removeClass("navbar_desktop-view");
+      $("#navbar-desk").addClass("navbar_desktop-ocultar")
       $("#navitem-home-desk").addClass("nav_menu--active");
       $("#navitem-home-mobile").addClass("nav_menu--active");
       break;

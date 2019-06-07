@@ -17,6 +17,7 @@
 
 // MENÚ ESCRITORIO
 .navbar_desktop {
+   display: flex;
   -webkit-box-shadow: 0px 3px 6px -1px rgba(51,51,51,0.1);
   -moz-box-shadow: 0px 3px 6px -1px rgba(51,51,51,0.1);
    box-shadow: 0px 3px 6px -1px rgba(51,51,51,0.1);
@@ -28,6 +29,9 @@
     z-index: -1;
     opacity: 0;    
   }
+}
+.navbar_desktop-ocultar {
+  display: none !important;
 }
 .navbar_desktop_menu__item{
     &:before {
@@ -68,14 +72,13 @@
 
 // STICKY MENU
 .navbar_desktop-view {
-  opacity:1;
   visibility:visible;
+  display: flex!important;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  transform:translate(0, -200px);
 }
 
 // MENÚ MÓVIL

@@ -1,13 +1,5 @@
 // MENÚ MÓVIL
-
-$(function() {
-  $(function() {
-    $('.toggle-overlay').click(function() {
-      $('.navbar').toggleClass('navbar_mobile--open');
-    });
-  });
-})(jQuery);
-
-$( "button" ).click(function() {
-  $( this ).toggleClass( "button_toggle--rotate" );
+$('#button_menu-mobile').click(function() {
+      $('#navbar-mobile').toggleClass('navbar_mobile--open');
+      $('#button_menu-mobile').toggleClass("button_toggle--rotate");
 });
