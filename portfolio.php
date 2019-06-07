@@ -48,7 +48,7 @@
 
 <body id="portfolio">
     
-  <div id="pageloader" class="pageloader is-active"><span class="title">CapybaraStudio</span></div>
+  <div id="pageloader" class="pageloader is-active c-portfolio"><span class="title">CapybaraStudio</span></div>
     
   <!-- HEADER -->
   <?php

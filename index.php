@@ -48,7 +48,7 @@
 
 <body id="home">
     
-  <div id="pageloader" class="pageloader is-active"><span class="title">CapybaraStudio</span></div>
+  <div id="pageloader" class="pageloader is-active c-corporativo"><span class="title">CapybaraStudio</span></div>
   
   <!-- HEADER -->
 
